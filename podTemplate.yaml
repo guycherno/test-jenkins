@@ -4,8 +4,8 @@ metadata:
 spec:
   containers:
   - name: jnlp
-     image: inbound-agent:4.3-4-alpine
-     args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
+    image: inbound-agent:4.3-4-alpine
+    args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
     env:
     - name: CONTAINER_ENV_VAR
       value: jnlp
