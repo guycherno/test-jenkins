@@ -9,6 +9,7 @@ spec:
     securityContext:
       allowPrivilegeEscalation: false
       runAsUser: 0
+    tty: true
     env:
     - name: CONTAINER_ENV_VAR
       value: jnlp
