@@ -4,6 +4,7 @@ metadata:
 spec:
   containers:
   - name: jnlp
+    image: jenkins/inbound-agent
     resourceRequestMemory: '1Gi'
     resourceLimitMemory: '1Gi'
     securityContext:
