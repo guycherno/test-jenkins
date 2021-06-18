@@ -4,13 +4,15 @@ metadata:
 spec:
   containers:
   - name: jnlp
-    image: jenkins/inbound-agent:4.3-4-alpine
-    args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
-    command:
-    - init
+    resourceRequestMemory: '1Gi'
+    resourceLimitMemory: '1Gi'
+    securityContext:
+      allowPrivilegeEscalation: false
+      runAsUser: 0
     env:
     - name: CONTAINER_ENV_VAR
       value: jnlp
+      # privileged: true
       
   - name: maven
     image: maven:3.3.9-jdk-8-alpine
